@@ -1,0 +1,23 @@
+POST http://localhost:3333/avicultores
+Content-Type: application/json
+
+{
+    "nome": "jorge",
+    "email": "jorge@ave",
+    "senha": "123"
+}
+
+###
+
+GET  http://localhost:3333/avicultores
+
+###
+
+PUT http://localhost:3333/avicultores/b736bde1-82ae-4832-98c9-5b7bbbed8052
+Content-Type: application/json
+
+{
+    "nome": "jorge",
+    "email": "jorge@ave",
+    "senha": "1234"
+}

@@ -1,34 +1,42 @@
+--drop table avicultores cascade;
+--drop table galpoes cascade;
+--drop table lotes cascade;
+--drop table tecnicos cascade;
+--drop table semanas cascade;
+	
+
+
 create table avicultores(
-	id_avicultor serial primary key,
+	id serial primary key,
 	nome varchar(200) not null,
 	email varchar(100) not null,
 	senha varchar(20) not null
 );
 
 create table galpoes(
-	id_galpao serial primary key,
+	id serial primary key,
 	nome varchar(10) not null, --ex: galpão 1--
-	dono integer references avicultores(id_avicultor)
+	dono integer references avicultores(id)
 );
 
 create table lotes(
-	id_lote serial primary key,
+	id serial primary key,
 	cod integer not null,
-	galpao integer references galpoes(id_galpao),
-	aviculor integer references avicultores(id_avicultor)
+	galpao integer references galpoes(id),
+	aviculor integer references avicultores(id)
 );
 
 create table tecnicos(
-	id_tecnico serial primary key,
+	id serial primary key,
 	nome varchar(200) not null,
 	email varchar(100) not null,
 	senha varchar(20) not null
-) 
+);
 
 create table semanas(
-	id_semana serial primary key,
+	id serial primary key,
 	semana numeric(1),
-	lote integer references lotes(id_lote),
-	galpão integer references galpoes(id_galpao)
+	lote integer references lotes(id),
+	galpão integer references galpoes(id)
 );
 
