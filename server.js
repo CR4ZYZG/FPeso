@@ -5,8 +5,12 @@ const server = fastify()
 const database = new DatabaseMemory()
 
 server.get('/avicultores', (request, reply) =>{
-    const avicultores = database.list()
+    const search = request.query.search
 
+    console.log(search)
+    
+    const avicultores = database.list(search)
+    
     return avicultores
 })
 
@@ -37,7 +41,11 @@ server.put('/avicultores/:id', (request, reply) =>{
 })
 
 server.delete('/avicultores/:id', (request, reply) =>{
-    
+    const avicultorId = request.params.id
+
+    database.delete(avicultorId)
+
+    return reply.status(204).send()
 })
 
 server.listen({
