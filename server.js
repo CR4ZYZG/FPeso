@@ -1,8 +1,16 @@
-import { createServer } from 'node:http'
+import { fastify } from 'fastify'
 
-const server = createServer(() =>{
-    console.log('hello server')
+const server = fastify()
+
+server.get('/', () =>{
+    return 'hello server'
 })
 
-server.listen(3333)
+server.get('/node', () =>{
+    return 'hello node'
+})
+
+server.listen({
+    port: 3333
+})
 

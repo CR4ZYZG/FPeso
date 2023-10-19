@@ -18,7 +18,12 @@ create table lotes(
 	aviculor integer references avicultores(id_avicultor)
 );
 
- 
+create table tecnicos(
+	id_tecnico serial primary key,
+	nome varchar(200) not null,
+	email varchar(100) not null,
+	senha varchar(20) not null
+) 
 
 create table semanas(
 	id_semana serial primary key,
