@@ -3,13 +3,22 @@ import { randomUUID } from "node:crypto"
 export class DatabasePostgres{
     #avicultores = new Map()
 
-    list( search) {
-        const avicultores
+    async list( search) {
+        let avicultores 
 
+        if(search){
+           avicultores = await sql`select * from avicultores where nome "%search%"`
+          
+        }else{
+            avicultores = await sql`select * from avicultores`
+        }
     }
+    async create(avicultor) {
+        const avicultorId = randomUUID()
 
-    create(avicultor) {
-        const id = randomUUID()
+        const {nome, email, senha} = avicultor
+
+        await sql`insert into avicultores(id, nome, email, senha) VALUES (${avicultorId}, ${nome}, ${email}, ${senha})`
 
         this.#avicultores.set(id, avicultor)
     }
