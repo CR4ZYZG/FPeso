@@ -1,5 +1,6 @@
 import { sql } from "./db.js";
 
+//sql`DROP TABLE IF EXISTS avicultores;`
 
 sql`
 create table avicultores(
@@ -7,9 +8,8 @@ create table avicultores(
 	nome varchar(200) not null,
 	email varchar(100) not null,
 	senha varchar(20) not null
-);
+);`
 
-`
 .then(()=>{
     console.log('criado')
 })
