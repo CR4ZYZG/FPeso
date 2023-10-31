@@ -1,16 +1,14 @@
 import { fastify } from 'fastify'
-import { DatabaseMemory } from './database-memory.js'
+//import { DatabaseMemory } from './database-memory.js'
 import { DatabasePostgres } from './database-postgres.js'
 const server = fastify()
 
-//const database = new DatabaseMemory()
+
 const database = new DatabasePostgres()
 
 
-server.get('/avicultores', async (request, reply) =>{
+server.get('/avicultores', async (request) =>{
     const search = request.query.search
-
-    console.log(search)
     
     const avicultores = await database.list(search)
     
