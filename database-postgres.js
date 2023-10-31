@@ -13,9 +13,9 @@ export class DatabasePostgres{
         } else {
 
             avicultores = await sql`SELECT * FROM avicultores`
-            
+
         }
-            
+            return avicultores
         
     }
 

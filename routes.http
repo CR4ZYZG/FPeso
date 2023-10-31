@@ -4,11 +4,10 @@ Content-Type: application/json
 {
     "nome": "jorge da silva",
     "email": "jorge@ave",
-    "senha": "123"
+    "senha": "12aa3"
 }
 
 ###
-
 GET http://localhost:3333/avicultores
 
 
