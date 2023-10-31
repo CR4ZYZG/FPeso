@@ -2,9 +2,9 @@ POST http://localhost:3333/avicultores
 Content-Type: application/json
 
 {
-    "nome": "jorge da silva",
+    "nome": "Jorge da Silva",
     "email": "jorge@ave",
-    "senha": "12aa3"
+    "senha": "123"
 }
 
 ###
