@@ -17,9 +17,9 @@ PUT http://localhost:3333/avicultores/1
 Content-Type: application/json
 
 {
-    "nome": "jorge",
+    "nome": "jorge agricola",
     "email": "jorge@ave",
-    "senha": "1234"
+    "senha": "12345"
 }
 
 

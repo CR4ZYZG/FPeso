@@ -26,4 +26,16 @@ export class DatabasePostgres{
         await sql`insert into avicultores(nome, email, senha) VALUES (${nome}, ${email}, ${senha})`
 
     }
+
+    async update(id, avicultor){
+
+        const {nome, email, senha} = avicultor
+
+        await sql`update avicultores set nome = ${nome}, email = ${email}, senha = ${senha} WHERE id = ${id}`
+
+    }
+
+    async delete(id){
+        await sql`delete from avicultores where id = ${id}`
+    }
 }

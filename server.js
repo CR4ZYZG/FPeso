@@ -27,12 +27,12 @@ server.post('/avicultores', async (request, reply) =>{
     return reply.status(201).send()
 })
 
-server.put('/avicultores/:id', (request, reply) =>{
+server.put('/avicultores/:id', async (request, reply) =>{
     const {nome, email, senha} = request.body
 
     const avicultorId = request.params.id
 
-    database.update(avicultorId, {
+    await database.update(avicultorId, {
         nome,
         email,
         senha,
@@ -41,10 +41,10 @@ server.put('/avicultores/:id', (request, reply) =>{
     return reply.status(204).send()
 })
 
-server.delete('/avicultores/:id', (request, reply) =>{
+server.delete('/avicultores/:id', async (request, reply) =>{
     const avicultorId = request.params.id
 
-    database.delete(avicultorId)
+    await database.delete(avicultorId)
 
     return reply.status(204).send()
 })
