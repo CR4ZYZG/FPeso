@@ -4,7 +4,7 @@ Content-Type: application/json
 {
     "nome": "Jorge da Silva",
     "email": "jorge@ave",
-    "senha": "123"
+    "senha": "123dddd"
 }
 
 ###
@@ -26,5 +26,5 @@ Content-Type: application/json
 ###
 
 
-DELETE https://fpeso.onrender.com/avicultores/1
+DELETE https://fpeso.onrender.com/avicultores/6
 
