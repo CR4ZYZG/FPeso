@@ -1,0 +1,30 @@
+POST https://fpeso.onrender.com/avicultores
+Content-Type: application/json
+
+{
+    "nome": "Jorge da Silva",
+    "email": "jorge@ave",
+    "senha": "123"
+}
+
+###
+GET https://fpeso.onrender.com/avicultores
+
+
+###
+
+PUT https://fpeso.onrender.com/avicultores/1
+Content-Type: application/json
+
+{
+    "nome": "jorge agricola",
+    "email": "jorge@ave",
+    "senha": "12345"
+}
+
+
+###
+
+
+DELETE https://fpeso.onrender.com/avicultores/1
+
