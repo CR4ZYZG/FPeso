@@ -2,9 +2,9 @@ POST https://fpeso.onrender.com/avicultores
 Content-Type: application/json
 
 {
-    "nome": "Jorge da Silva",
+    "nome": "Carlos Souza",
     "email": "jorge@ave",
-    "senha": "123dddd"
+    "senha": "123"
 }
 
 ###
@@ -13,13 +13,13 @@ GET https://fpeso.onrender.com/avicultores
 
 ###
 
-PUT https://fpeso.onrender.com/avicultores/7
+PUT https://fpeso.onrender.com/avicultores/3
 Content-Type: application/json
 
 {
-    "nome": "jorge agricola",
+    "nome": "Carlos Souza",
     "email": "jorge@ave",
-    "senha": "12345"
+    "senha": "123"
 }
 
 
